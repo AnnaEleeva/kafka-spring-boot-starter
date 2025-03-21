@@ -1,0 +1,6 @@
+app:
+  anna:
+    kafka:
+      bootstrap-servers: 192.168.31.53:9092
+      producer:
+        topic: rest_data

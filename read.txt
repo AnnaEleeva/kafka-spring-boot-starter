@@ -1,0 +1,18 @@
+sudo service docker start
+sudo service docker stop
+
+hostname -I
+
+docker-compose up -d
+
+docker exec -it kafka bash
+kafka-topics --create --topic rest_data --bootstrap-server localhost:9092
+kafka-topics --list --bootstrap-server localhost:9092
+
+kafka-console-consumer --bootstrap-server localhost:9092 \
+                          --topic rest_data \
+                          --from-beginning
+
+
+
+
